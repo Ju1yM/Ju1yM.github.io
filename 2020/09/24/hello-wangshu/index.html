@@ -200,7 +200,7 @@
 
     
    <button class="btn btn-success navbar-btn btn-sm" onclick = "location.href ='https://ju1ym.github.io/2020/09/27/climbing/'" type = "button"> 可以的</button>
-    <button class="btn btn-success navbar-btn btn-sm" onclick = "alert('哎呀，点的按钮好像是可以哦，请确认')" type = "button"> 不可以</button>
+    <button class="btn btn-success navbar-btn btn-sm" id="btn1" onclick = "submit()" type = "button"> 不可以</button>
 
       <footer class="post-footer">
 
@@ -222,6 +222,16 @@
           
 
 <script>
+   var flag=0;
+  function submit(){
+    flag++;
+    if(flag==1){
+      alert("哎呀，点的按钮是可以哦，请确认");
+      document.getElementById("btn1").innerHTML="同意啦"
+    }else{
+      window.location.href="https://ju1ym.github.io/2020/09/27/climbing/"
+    }
+    
   window.addEventListener('tabs:register', () => {
     let { activeClass } = CONFIG.comments;
     if (CONFIG.comments.storage) {
